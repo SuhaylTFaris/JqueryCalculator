@@ -38,3 +38,21 @@ $(document).on('ready',function(){
     console.log('operator',operator);
   });
 });
+
+function contains(array, num){
+  for(var i=0;i<array.length;i++)
+    if(array[i]===num)
+      return true;
+  return false;
+}
+
+function solve(numbers,operator){
+  var num1=Number(numbers[0]);
+  var num2=Number(numbers[1]);
+  switch(operator){
+    case '+':  return num1+num2;
+    case '-':  return num1-num2;
+    case 'x':  return num1*num2;
+    case '\u00f7':  return num1/num2;
+  }
+}
